@@ -1,0 +1,55 @@
+[
+  {
+    "id": "lead_1792405918903_cyea4",
+    "createdAt": "2026-10-19T10:31:58.903Z",
+    "type": "produits",
+    "fullName": "Test Lead",
+    "company": "Test Corp",
+    "email": "test@corp.ma",
+    "phone": "+212600000000",
+    "category": "materiel-informatique",
+    "description": "Demande de test curl",
+    "status": "nouveau"
+  },
+  {
+    "id": "lead_1",
+    "createdAt": "2026-10-17T10:31:49.551Z",
+    "type": "produits",
+    "fullName": "Karim Bennani",
+    "company": "Fintech Atlas Casablanca",
+    "email": "k.bennani@atlasfintech.ma",
+    "phone": "+212 6 61 23 45 67",
+    "category": "materiel-informatique",
+    "description": "Renouvellement du parc informatique pour nos développeurs : 15 laptops 32GB RAM et 15 écrans 27 pouces 4K.",
+    "quantity": "15 postes complets",
+    "status": "en_cours",
+    "notes": "Premier contact téléphonique établi. Proposition commerciale envoyée par Salma El Mejjaty."
+  },
+  {
+    "id": "lead_2",
+    "createdAt": "2026-10-18T16:31:49.551Z",
+    "type": "prestation",
+    "fullName": "Nadia Mansouri",
+    "company": "Logistique Maroc Express",
+    "email": "n.mansouri@marocexpress.ma",
+    "phone": "+212 6 72 88 99 00",
+    "service": "Consulting IT & Solutions digitales",
+    "description": "Projet d’audit UX et refonte complète de notre portail de suivi des expéditions B2B avec intégration API ERP.",
+    "budget": "150 000 - 300 000 MAD",
+    "timeline": "T2 2026",
+    "status": "nouveau"
+  },
+  {
+    "id": "lead_3",
+    "createdAt": "2026-10-19T06:31:49.551Z",
+    "type": "solution",
+    "fullName": "Youssef Chraibi",
+    "company": "Cabinet Médical Al Amal",
+    "email": "contact@alamal-clinique.ma",
+    "phone": "+212 5 22 45 67 89",
+    "solutionType": "ERP",
+    "description": "Recherche d’une solution de gestion des plannings, facturation et dossiers patients sécurisée.",
+    "userCount": "25 à 50 utilisateurs",
+    "status": "nouveau"
+  }
+]
