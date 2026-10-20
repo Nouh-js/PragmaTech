@@ -99,43 +99,60 @@ export const FournituresEquipementsPage: React.FC<FournituresEquipementsPageProp
       </section>
 
       {/* Les Familles de Produits */}
-      <section className="bg-slate-50 py-20 border-y border-slate-200">
+      <section className="bg-slate-50/80 py-20 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
             <div className="text-xs font-semibold text-blue-600 tracking-wider uppercase mb-2">
               Familles de Produits
             </div>
             <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-              Cinq grandes catégories d'équipements
+              Cinq grandes catégories d'équipements professionnelles
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {PRODUCT_CATEGORIES.map((cat) => (
-              <div key={cat.id} className="bg-white rounded-xl border border-slate-200 p-6 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">{cat.title}</h3>
-                  <p className="text-xs text-slate-600 leading-relaxed mb-4">{cat.shortDesc}</p>
-                  
-                  <div className="space-y-1.5 border-t border-slate-100 pt-3">
-                    <div className="text-[11px] font-bold text-slate-900 uppercase">Exemples :</div>
-                    {cat.equipmentExamples.map((ex, eIdx) => (
-                      <div key={eIdx} className="text-xs text-slate-500 flex items-center gap-1.5">
-                        <span className="w-1 h-1 rounded-full bg-blue-500" />
-                        <span>{ex}</span>
-                      </div>
-                    ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {PRODUCT_CATEGORIES.map((cat, idx) => (
+              <div key={cat.id} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-lg transition-all flex flex-col justify-between group">
+                <div className="relative h-48 overflow-hidden bg-slate-100">
+                  <img
+                    src={cat.image}
+                    alt={cat.title}
+                    className="w-full h-full object-cover group-hover:scale-104 transition-transform duration-500 ease-out"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-3 left-4 right-4 text-white">
+                    <span className="text-[11px] font-semibold text-blue-300 uppercase tracking-wider">
+                      Famille 0{idx + 1}
+                    </span>
+                    <h3 className="text-lg font-bold">{cat.title}</h3>
                   </div>
                 </div>
 
-                <div className="pt-5 mt-5 border-t border-slate-100">
-                  <button
-                    onClick={() => onNavigate(`/demande-devis?cat=${cat.id}`)}
-                    className="w-full py-2.5 rounded-lg bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5"
-                  >
-                    <span>Demander un devis {cat.title}</span>
-                    <ArrowUpRight className="w-3.5 h-3.5" />
-                  </button>
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <p className="text-xs text-slate-600 leading-relaxed mb-4">{cat.shortDesc}</p>
+                    
+                    <div className="space-y-1.5 border-t border-slate-100 pt-3">
+                      <div className="text-[11px] font-bold text-slate-900 uppercase">Spécifications clés :</div>
+                      {cat.features.slice(0, 3).map((feat, eIdx) => (
+                        <div key={eIdx} className="text-xs text-slate-600 flex items-center gap-1.5">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+                          <span>{feat}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="pt-5 mt-5 border-t border-slate-100">
+                    <button
+                      onClick={() => onNavigate(`/demande-devis?cat=${cat.id}`)}
+                      className="w-full py-2.5 rounded-lg bg-slate-900 hover:bg-blue-600 text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                    >
+                      <span>Demander un devis ({cat.title})</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}

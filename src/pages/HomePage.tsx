@@ -1,6 +1,8 @@
 import React from 'react';
 import { ArrowRight, ArrowUpRight, CheckCircle2, FileDown, Layers, Laptop, ShieldCheck, Sparkles, Clock, Compass, Users2, Cpu } from 'lucide-react';
 import { COMPANY_INFO, PRODUCT_CATEGORIES, SERVICE_PILLARS } from '../data/companyData';
+import { EquipmentsSection } from '../components/EquipmentsSection';
+import { HeroSection } from '../components/HeroSection';
 
 interface HomePageProps {
   onNavigate: (path: string) => void;
@@ -13,91 +15,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenCatalog })
       {/* ========================================================
           SECTION 1 — HERO
           ======================================================== */}
-      <section className="relative pt-12 sm:pt-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-            {/* Left Column: Headlines & CTAs */}
-            <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 text-xs font-semibold text-blue-600 tracking-wider uppercase">
-                <span>Partenaire Technologique & Équipements Professionnels</span>
-              </div>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.08] text-balance">
-                La technologie au service de vos ambitions.
-              </h1>
-
-              <p className="text-lg text-slate-600 leading-relaxed max-w-2xl text-pretty font-normal">
-                PRAGMA TECHNOLOGIES accompagne les entreprises dans leurs projets digitaux et leurs besoins en équipements professionnels, avec des solutions adaptées à leurs enjeux métiers.
-              </p>
-
-              {/* CTAs */}
-              <div className="flex flex-wrap items-center gap-4 pt-2">
-                <button
-                  onClick={() => onNavigate('/services')}
-                  className="px-6 py-3.5 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 active:scale-98 transition-all shadow-md shadow-blue-600/20 inline-flex items-center gap-2 cursor-pointer"
-                >
-                  <span>Découvrir nos services</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-
-                <button
-                  onClick={() => onNavigate('/demande-devis')}
-                  className="px-6 py-3.5 rounded-lg bg-slate-900 text-white font-semibold text-sm hover:bg-slate-800 active:scale-98 transition-all shadow-xs inline-flex items-center gap-2 cursor-pointer"
-                >
-                  <span>Demander un devis</span>
-                  <ArrowUpRight className="w-4 h-4 text-slate-400" />
-                </button>
-              </div>
-
-              {/* Trust signals strip */}
-              <div className="pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-6 max-w-xl text-slate-600">
-                <div>
-                  <div className="text-xl sm:text-2xl font-bold text-slate-900 tabular-nums">24h - 48h</div>
-                  <div className="text-xs text-slate-500 mt-0.5">Délai d'étude & devis B2B</div>
-                </div>
-                <div>
-                  <div className="text-xl sm:text-2xl font-bold text-slate-900 tabular-nums">100%</div>
-                  <div className="text-xs text-slate-500 mt-0.5">Couverture nationale Maroc</div>
-                </div>
-                <div>
-                  <div className="text-xl sm:text-2xl font-bold text-slate-900 tabular-nums">3 Pôles</div>
-                  <div className="text-xs text-slate-500 mt-0.5">Expertises intégrées</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column: High-Impact Visual Asset */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200/80 group">
-                <img
-                  src="/src/assets/images/hero_corporate_tech_1792405291182.jpg"
-                  alt="PRAGMA TECHNOLOGIES Corporate Office"
-                  className="w-full h-[440px] sm:h-[500px] object-cover group-hover:scale-102 transition-transform duration-700 ease-out"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent pointer-events-none" />
-                
-                {/* Visual Card Accent */}
-                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-white/40 shadow-lg text-slate-900">
-                  <div className="text-xs font-semibold text-blue-600 uppercase tracking-wider">
-                    PRAGMA TECHNOLOGIES · Casablanca
-                  </div>
-                  <div className="text-sm font-bold mt-1 text-slate-900">
-                    Ingénierie Digitale, Conseil & Équipements Pro
-                  </div>
-                  <div className="text-xs text-slate-500 mt-1 flex items-center gap-3">
-                    <span>Solutions ERP / CRM</span>
-                    <span aria-hidden="true">·</span>
-                    <span>Design UX/UI</span>
-                    <span aria-hidden="true">·</span>
-                    <span>Parc IT</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection onNavigate={onNavigate} />
 
       {/* ========================================================
           SECTION 2 — NOS EXPERTISES
@@ -169,82 +87,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenCatalog })
       </section>
 
       {/* ========================================================
-          SECTION 3 — NOS PRODUITS (CATÉGORIES UNIQUEMENT)
+          SECTION 3 — NOS PRODUITS / FOURNITURES & ÉQUIPEMENTS PRO
           ======================================================== */}
-      <section className="bg-slate-50/70 py-20 border-y border-slate-200/70">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-            <div>
-              <div className="text-xs font-semibold text-blue-600 tracking-wider uppercase mb-2">
-                Fournitures & Équipements Professionnels
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Tout pour équiper votre entreprise
-              </h2>
-              <p className="text-base text-slate-600 mt-2 max-w-2xl">
-                Découvrez nos cinq grandes familles d'équipements professionnelles, certifiées constructeurs et prêtes pour le déploiement sur site.
-              </p>
-            </div>
-
-            <button
-              onClick={() => onNavigate('/produits')}
-              className="px-5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 text-xs font-semibold hover:border-blue-600 hover:text-blue-600 transition-colors inline-flex items-center gap-2 self-start md:self-auto shadow-xs shrink-0 cursor-pointer"
-            >
-              <span>Explorer nos catégories</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {PRODUCT_CATEGORIES.map((cat, idx) => (
-              <div
-                key={cat.id}
-                className={`bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-lg hover:border-slate-300 transition-all duration-300 flex flex-col justify-between ${
-                  idx === 0 ? 'md:col-span-2 lg:col-span-2' : ''
-                }`}
-              >
-                <div className="relative h-52 overflow-hidden bg-slate-100">
-                  <img
-                    src={cat.image}
-                    alt={cat.title}
-                    className="w-full h-full object-cover hover:scale-103 transition-transform duration-500"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 to-transparent" />
-                  <div className="absolute bottom-3 left-4 right-4 text-white">
-                    <span className="text-xs font-medium text-blue-300 uppercase tracking-wider">
-                      Famille {idx + 1}
-                    </span>
-                    <h3 className="text-lg font-bold">{cat.title}</h3>
-                  </div>
-                </div>
-
-                <div className="p-5 flex-1 flex flex-col justify-between">
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    {cat.shortDesc}
-                  </p>
-
-                  <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-                    <button
-                      onClick={() => onNavigate(`/demande-devis?cat=${cat.id}`)}
-                      className="text-xs font-semibold text-blue-600 hover:text-blue-700 inline-flex items-center gap-1.5"
-                    >
-                      <span>Demander un devis</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </button>
-                    <button
-                      onClick={() => onNavigate(`/produits?cat=${cat.id}`)}
-                      className="text-xs text-slate-500 hover:text-slate-800"
-                    >
-                      En savoir plus
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <EquipmentsSection onNavigate={onNavigate} onOpenCatalog={onOpenCatalog} />
 
       {/* ========================================================
           SECTION 4 — NOS SOLUTIONS DIGITALES
