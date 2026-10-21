@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, ArrowUpRight, Cpu, Sparkles, ShieldCheck, Laptop, Network, Layers, CheckCircle2 } from 'lucide-react';
+import heroImage from '../assets/images/hero_corporate_tech_1792405291182.jpg';
 
 interface HeroSectionProps {
   onNavigate: (path: string) => void;
@@ -114,7 +115,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               {/* Photo centrale Corporate Tech & Consulting */}
               <div className="relative h-[420px] sm:h-[480px] overflow-hidden">
                 <img
-                  src="/src/assets/images/hero_corporate_tech_1792405291182.jpg"
+                  src={heroImage}
                   alt="PRAGMA TECHNOLOGIES Centre d'Expertise"
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-1000 ease-out opacity-90"
                   referrerPolicy="no-referrer"
