@@ -1,4 +1,11 @@
 import { ProductCategoryInfo } from '../types';
+import materielITImage from '../assets/images/equipements_materiel_it_1792405292123.jpg';
+import impressionImage from '../assets/images/equipements_impression_1792405419919.jpg';
+import fournituresBureauImage from '../assets/images/equipements_fournitures_bureau_1792405419255.jpg';
+import reseauDatacenterImage from '../assets/images/equipements_reseau_datacenter_1792405293112.jpg';
+import mobilierBureauImage from '../assets/images/equipements_mobilier_bureau_1792405419818.jpg';
+import consultingITImage from '../assets/images/service_consulting_it_1792405291610.jpg';
+import designUIUXImage from '../assets/images/service_design_uiux_1792405292042.jpg';
 
 export const COMPANY_INFO = {
   name: 'PRAGMA TECHNOLOGIES',
@@ -31,7 +38,7 @@ export const PRODUCT_CATEGORIES: ProductCategoryInfo[] = [
     title: 'Matériel informatique',
     shortDesc: 'Ordinateurs portables, postes fixes, écrans, périphériques et accessoires informatiques adaptés aux besoins des professionnels.',
     fullDesc: 'Équipez vos collaborateurs avec du matériel informatique performant, robuste et garanti constructeur. Nous sélectionnons des configurations adaptées aux profils bureautiques, techniques et créatifs.',
-    image: '/src/assets/images/equipements_materiel_it_1792405292123.jpg',
+    image: materielITImage,
     features: ['Garantie constructeur pro', 'Configuration sur-mesure', 'Postes fixes & stations mobiles', 'Périphériques & stations d’accueil'],
     equipmentExamples: ['Laptops d’entreprise (Dell, HP, Lenovo)', 'Moniteurs 24" à 34" calibrés', 'Stations de travail DAO/CAO', 'Accessoires & connectique pro'],
   },
@@ -40,7 +47,7 @@ export const PRODUCT_CATEGORIES: ProductCategoryInfo[] = [
     title: 'Impression & Consommables',
     shortDesc: 'Imprimantes, scanners, solutions multifonctions, toners, cartouches et consommables d’impression.',
     fullDesc: 'Des systèmes d’impression fiables et économiques pour gérer vos flux documentaires en toute sérénité. Gestion de parc et approvisionnement continu en consommables certifiés.',
-    image: '/src/assets/images/equipements_impression_1792405419919.jpg',
+    image: impressionImage,
     features: ['Multifonctions couleur & monochrome', 'Consommables d’origine garantis', 'Optimisation des coûts à la page', 'Scanners de numérisation rapide'],
     equipmentExamples: ['Copieurs multifonctions A3/A4', 'Imprimantes laser réseau', 'Cartouches et toners d’origine', 'Scanners de production'],
   },
@@ -49,7 +56,7 @@ export const PRODUCT_CATEGORIES: ProductCategoryInfo[] = [
     title: 'Fournitures de bureau',
     shortDesc: 'Papeterie, fournitures administratives, accessoires de classement et équipements essentiels à l’organisation quotidienne.',
     fullDesc: 'L’ensemble des fournitures de bureau indispensables au bon fonctionnement quotidien de vos équipes administratives et opérationnelles.',
-    image: '/src/assets/images/equipements_fournitures_bureau_1792405419255.jpg',
+    image: fournituresBureauImage,
     features: ['Papeterie haut de gamme', 'Classement & archivage', 'Fournitures administratives', 'Livraison groupée programmée'],
     equipmentExamples: ['Papiers reprographiques certifiés', 'Modules & classeurs d’archivage', 'Écriture et petit matériel de bureau', 'Accessoires de réunion et tableaux'],
   },
@@ -58,7 +65,7 @@ export const PRODUCT_CATEGORIES: ProductCategoryInfo[] = [
     title: 'Réseau & Sécurité',
     shortDesc: 'Équipements réseau, solutions Wi-Fi, vidéosurveillance, contrôle d’accès et infrastructures de connectivité.',
     fullDesc: 'Construisez une infrastructure réseau robuste, sécurisée et pérenne pour interconnecter vos collaborateurs et protéger vos locaux professionnels.',
-    image: '/src/assets/images/equipements_reseau_datacenter_1792405293112.jpg',
+    image: reseauDatacenterImage,
     features: ['Réseau filaire Gigabit/10G', 'Bornes Wi-Fi 6 managées', 'Vidéoprotection IP HD', 'Contrôle d’accès biométrique & badge'],
     equipmentExamples: ['Switches administrables & routeurs', 'Baies de brassage & câblage RJ45/Fibre', 'Caméras dômes et enregistreurs NVR', 'Onduleurs de protection électrique'],
   },
@@ -67,7 +74,7 @@ export const PRODUCT_CATEGORIES: ProductCategoryInfo[] = [
     title: 'Mobilier de bureau',
     shortDesc: 'Bureaux, fauteuils ergonomiques, rangements, tables de réunion et solutions d’aménagement professionnel.',
     fullDesc: 'Aménagez des espaces de travail conviviaux, inspirants et ergonomiques, favorisant la productivité et le bien-être de vos collaborateurs.',
-    image: '/src/assets/images/equipements_mobilier_bureau_1792405419818.jpg',
+    image: mobilierBureauImage,
     features: ['Ergonomie certifiée', 'Design contemporain épuré', 'Agencement modulaire', 'Matériaux durables'],
     equipmentExamples: ['Bureaux individuels & benchtops', 'Fauteuils de direction & opérationnels', 'Tables de réunion & conférence', 'Caissons et armoires métalliques'],
   },
@@ -79,7 +86,7 @@ export const SERVICE_PILLARS = [
     title: 'Consulting IT & Solutions digitales',
     kicker: 'Pôle Ingénierie & Conseil',
     shortDesc: 'Conseil en architecture, ingénierie logicielle sur-mesure, intégration ERP/CRM et accompagnement à la transformation digitale.',
-    image: '/src/assets/images/service_consulting_it_1792405291610.jpg',
+    image: consultingITImage,
     points: [
       'Conseil et accompagnement stratégique IT',
       'Développement d’applications web et mobiles',
@@ -108,7 +115,7 @@ export const SERVICE_PILLARS = [
     title: 'Design UX/UI',
     kicker: 'Pôle Expérience & Produit',
     shortDesc: 'Conception d’expériences digitales intuitives, centrées sur les utilisateurs finaux et orientées vers la performance métier.',
-    image: '/src/assets/images/service_design_uiux_1792405292042.jpg',
+    image: designUIUXImage,
     points: [
       'UX Research et analyse approfondie des besoins',
       'Audit UX et ergonomique des solutions existantes',
@@ -138,7 +145,7 @@ export const SERVICE_PILLARS = [
     title: 'Fournitures & Équipements professionnels',
     kicker: 'Pôle Approvisionnement & Aménagement',
     shortDesc: 'Fourniture globale de matériel informatique, réseaux, impression, mobilier et équipements administratifs pour entreprises.',
-    image: '/src/assets/images/equipements_materiel_it_1792405292123.jpg',
+    image: materielITImage,
     points: [
       'Matériel informatique (postes, laptops, écrans)',
       'Impression et consommables d’origine',
